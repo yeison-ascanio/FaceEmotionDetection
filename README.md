@@ -26,10 +26,8 @@ Python programming language was used to train the model. This language provides 
 ## Up Environment
 
 > [!NOTE] 
-> You can use 2 methods for get up the environment. 1st native python, 2st with anaconda
+> In previous versions, support was added for running in an Anaconda environment. This version may not start in this environment.
 
-> [!NOTE] 
-> Native python
 Create the environment:
 ```python
     python3 -m venv /route/environment
@@ -51,21 +49,9 @@ Now, to install dependencies, run the following command:
 ```python
     pip install -r requirements.txt
 ```
-
-> [!NOTE] 
-> Anaconda method
-```python
-    conda create -n FaceEmotion
-    conda activate FaceEmotion
-    conda install python=3.7
-    pip install tensorflow==2.4.1
-    pip install keras==2.4.3
-    pip install imutils opencv-python h5py
-    pip install matplotlib == 3.2.2
-```
 ## Run
 
 After activating the environment, you should position yourself at the root of the project and execute the following command:
 ```python
-    python FaceEmotionVideo.py
+    python interface.py
 ```

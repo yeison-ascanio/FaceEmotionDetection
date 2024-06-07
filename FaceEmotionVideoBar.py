@@ -1,8 +1,3 @@
-## Detección de emociones en tiempo real ##
-## SISTEMAS INTELIGENTES ##
-## https://www.youtube.com/channel/UCr_dJOULDvSXMHA1PSHy2rg
-## David Revelo Luna
-
 # Import de librerias
 from tensorflow.keras.applications.imagenet_utils import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
