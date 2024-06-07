@@ -4,6 +4,7 @@ This project discusses a method, for identifying emotions based on expressions u
 
 > [!WARNING] 
 > You'll need permissions camera for run this project
+
 > [!WARNING] 
 > This project was developed in macOs
 
