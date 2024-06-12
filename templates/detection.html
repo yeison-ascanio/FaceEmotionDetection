@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección de Emociones</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="preloader" class="preloader">
+        <div class="loader"></div>
+    </div>
+    <div class="header">
+        <a href="/" class="button">Detección de Emociones</a>
+    </div>
+    <div class="video-container">
+        <h1>Detección en Tiempo Real</h1>
+        <p id="statusMessage">Conectando a la cámara...</p>
+
+        <img id="videoFeed" alt="Video Feed" style="display:none;"></img>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

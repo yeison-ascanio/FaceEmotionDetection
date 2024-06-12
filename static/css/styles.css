@@ -1,0 +1,133 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background: url('../images/background.png') no-repeat center center fixed;
+    backdrop-filter: blur(2px); /* Agrega desenfoque al fondo */
+    background-size: cover;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+    text-align: center;
+    background-size: cover;
+    background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para mejorar la legibilidad */
+}
+
+.container h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #a10812;
+}
+
+/* Encabezado */
+.header {
+    padding: 20px;
+    text-align: center;
+    background: #e50914;
+    color: white;
+    font-size: 1.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+/* Contenedor de video */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.video-container h1 {
+    margin-bottom: 20px;
+}
+
+.video-container img {
+    width: 90%;
+    max-width: 1000px;
+    border: 2px solid #ffffff;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #e50914;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mensaje de estado */
+#statusMessage {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}

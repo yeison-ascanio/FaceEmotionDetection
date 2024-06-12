@@ -1,0 +1,31 @@
+# Ignorar archivos y directorios específicos
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+environment
+assets
+
+# Ignorar configuraciones de IDE
+.vscode/
+.idea/
+*.iml
+
+# Ignorar archivos de control de versiones
+.git/
+.gitignore
+
+#files
+images.rar
+
+# Ignorar datos temporales y logs
+*.log
+*.tmp
+.DS_Store
+
+# Ignorar datos sensibles o de configuración local
+.env
+
+# Ignorar archivos de prueba
+tests/

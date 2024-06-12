@@ -2,3 +2,5 @@
 /.vscode
 .DS_Store
 Thumbs.db
+__pycache__
+*.mp4
