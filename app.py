@@ -24,30 +24,33 @@ def detect_faces(frame):
     faceNet.setInput(blob)
     return faceNet.forward()
 
+def preprocess_face(face):
+    face = cv2.resize(face, (48, 48))
+    face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
+    face = img_to_array(face)
+    face = np.expand_dims(face, axis=0)
+    return face
+
 def predict_emotions(frame, detections, confidence_threshold=0.5):
     locs = []
     preds = []
 
+    (h, w) = frame.shape[:2]
+
     for i in range(detections.shape[2]):
         confidence = detections[0, 0, i, 2]
         if confidence > confidence_threshold:
-            box = detections[0, 0, i, 3:7] * np.array([frame.shape[1], frame.shape[0], frame.shape[1], frame.shape[0]])
+            box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
             (Xi, Yi, Xf, Yf) = box.astype("int")
 
-            Xi = max(0, Xi)
-            Yi = max(0, Yi)
-            Xf = min(frame.shape[1], Xf)
-            Yf = min(frame.shape[0], Yf)
+            Xi, Yi = max(0, Xi), max(0, Yi)
+            Xf, Yf = min(w, Xf), min(h, Yf)
 
             face = frame[Yi:Yf, Xi:Xf]
             if face.size == 0:
                 continue
 
-            face = cv2.resize(face, (48, 48))
-            face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
-            face = img_to_array(face)
-            face = np.expand_dims(face, axis=0)
-
+            face = preprocess_face(face)
             pred = emotionModel.predict(face)[0]
 
             locs.append((Xi, Yi, Xf, Yf))
@@ -73,8 +76,7 @@ def detection():
 
 @socketio.on('process_frame')
 def handle_process_frame(data):
-    image_data = data['frame']
-    image_data = base64.b64decode(image_data)
+    image_data = base64.b64decode(data['frame'])
     image = Image.open(io.BytesIO(image_data))
     frame = np.array(image)
 

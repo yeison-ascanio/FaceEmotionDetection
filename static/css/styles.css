@@ -79,12 +79,23 @@ body {
     padding-top: 60px;
 }
 
-.video-container h1 {
+.title{
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.title h1 {
     margin-bottom: 20px;
 }
 
 .video-container img {
-    width: 90%;
+    width: 80%;
     max-width: 1000px;
     border: 2px solid #ffffff;
     background-color: #000000;

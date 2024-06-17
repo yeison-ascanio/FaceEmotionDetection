@@ -6,3 +6,5 @@ flask-socketio
 opencv-python-headless
 pillow
 eventlet
+pytest
+pytest-flask
