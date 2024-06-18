@@ -73,5 +73,5 @@ jobs:
 
       - name: Build and Push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/faceEmotions:latest .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/faceEmotions:latest
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/face_emotions:latest .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/face_emotions:latest
