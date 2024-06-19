@@ -28,13 +28,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Copia los archivos de requerimientos y los instala
 COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia el contenido de la aplicación, omitiendo lo especificado en .dockerignore
 COPY . .
 
 # Exponer el puerto en el que la app correrá
-EXPOSE 5000
+EXPOSE 80
 
 # Comando para ejecutar la aplicación
 CMD ["python", "app.py"]

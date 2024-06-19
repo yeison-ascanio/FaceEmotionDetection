@@ -16,7 +16,6 @@ body {
     height: 100vh;
     padding: 10px;
     text-align: center;
-    background-size: cover;
     background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para mejorar la legibilidad */
 }
 
@@ -71,7 +70,6 @@ body {
     flex-direction: column;
     justify-content: center;
     background: rgba(0, 0, 0, 0.6);
-    background-size: cover;
     align-items: center;
     width: 100%;
     height: 100vh;
@@ -141,4 +139,100 @@ body {
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #141414;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #e50914;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1200px) {
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    .container p {
+        font-size: 1.25rem;
+    }
+
+    .button {
+        font-size: 1.25rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 1.25rem;
+        padding: 15px;
+    }
+
+    .container h1 {
+        font-size: 2.5rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .video-container img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container p {
+        font-size: 0.875rem;
+    }
+
+    .button {
+        font-size: 0.875rem;
+        padding: 5px 10px;
+    }
+
+    .video-container img {
+        width: 100%;
+    }
 }
