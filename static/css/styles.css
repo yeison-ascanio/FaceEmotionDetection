@@ -150,6 +150,9 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer p {
@@ -211,6 +214,14 @@ body {
     .video-container img {
         width: 90%;
     }
+
+    .footer p {
+        font-size: 0.875rem;
+    }
+
+    .social-links a {
+        font-size: 0.875rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -234,5 +245,13 @@ body {
 
     .video-container img {
         width: 100%;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+    }
+
+    .social-links a {
+        font-size: 0.75rem;
     }
 }
